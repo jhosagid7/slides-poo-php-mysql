@@ -193,7 +193,7 @@
 				</p>
 				<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
 			</section>
-			<section>
+			<!-- <section>
 				<h1>Unidad 2</h1>
 				<h3>Programación Orientada a Objetos en</h3>
 				<img src="img/php.jpg" style="max-width:30%;"/>
@@ -215,17 +215,17 @@
 				<h3>Definición de Clase</h3>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	var $un_atributo
-
-	function un_metodo() {
-
-	}
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				var $un_atributo
+			
+				function un_metodo() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -233,19 +233,19 @@ class NombreDeMiClase {
 				<h3>Instanciar una Clase</h3>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	var $un_atributo
-
-	function un_metodo() {
-
-	}
-
-}
-
-$objeto = new NombreDeMiClase();
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				var $un_atributo
+			
+				function un_metodo() {
+			
+				}
+			
+			}
+			
+			$objeto = new NombreDeMiClase();
 					</code>
 				</pre>
 			</section>
@@ -259,20 +259,20 @@ $objeto = new NombreDeMiClase();
 				<h3>Herencia de Clases</h3>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClaseMadre {
-
-	//...
-
-}
-
-class NombreDeMiClaseHija extends NombreDeMiClaseMadre {
-	
-	/* esta clase hereda todos los métodos y propiedades de
-		la clase madre NombreDeMiClaseMadre	*/
-
-}
+			&lt;?php
+			
+			class NombreDeMiClaseMadre {
+			
+				//...
+			
+			}
+			
+			class NombreDeMiClaseHija extends NombreDeMiClaseMadre {
+				
+				/* esta clase hereda todos los métodos y propiedades de
+					la clase madre NombreDeMiClaseMadre	*/
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -289,17 +289,17 @@ class NombreDeMiClaseHija extends NombreDeMiClaseMadre {
 				<h3>Definición de Clase Abstracta</h3>
 				<pre>
 					<code class="php">
-&lt;?php
-
-abstract class NombreDeMiClaseAbstracta {
-
-	var $un_atributo_abstracto
-
-	function un_metodo_abstracto() {
-
-	}
-
-}
+			&lt;?php
+			
+			abstract class NombreDeMiClaseAbstracta {
+			
+				var $un_atributo_abstracto
+			
+				function un_metodo_abstracto() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -310,17 +310,17 @@ abstract class NombreDeMiClaseAbstracta {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-final class NombreDeMiClaseFinal {
-
-	var $un_atributo_final
-
-	function un_metodo_final() {
-
-	}
-
-}
+			&lt;?php
+			
+			final class NombreDeMiClaseFinal {
+			
+				var $un_atributo_final
+			
+				function un_metodo_final() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -389,17 +389,17 @@ final class NombreDeMiClaseFinal {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	public $un_atributo_publico
-
-	public function un_metodo_publico() {
-
-	}
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				public $un_atributo_publico
+			
+				public function un_metodo_publico() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -410,17 +410,17 @@ class NombreDeMiClase {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	private $un_atributo_privado
-
-	private function un_metodo_privado() {
-
-	}
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				private $un_atributo_privado
+			
+				private function un_metodo_privado() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -431,17 +431,17 @@ class NombreDeMiClase {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	protected $un_atributo_protegido
-
-	protected function un_metodo_protegido() {
-
-	}
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				protected $un_atributo_protegido
+			
+				protected function un_metodo_protegido() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -452,17 +452,17 @@ class NombreDeMiClase {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	public static $un_atributo_estatico
-
-	public static function un_metodo_estatico() {
-
-	}
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				public static $un_atributo_estatico
+			
+				public static function un_metodo_estatico() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -483,15 +483,15 @@ class NombreDeMiClase {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	$this->atributo;
-	
-	$this->metodo();
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				$this->atributo;
+				
+				$this->metodo();
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -502,17 +502,17 @@ class NombreDeMiClase {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	self::atributo_estatico_de_esta_clase;
-	parent::atributo_estatico_de_clase_madre;
-	
-	self::metodo_estatico_de_esta_clase();
-	parent::metodo_estatico_de_clase_madre();
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				self::atributo_estatico_de_esta_clase;
+				parent::atributo_estatico_de_clase_madre;
+				
+				self::metodo_estatico_de_esta_clase();
+				parent::metodo_estatico_de_clase_madre();
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -523,13 +523,13 @@ class NombreDeMiClase {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-$objeto = new Clase();
-
-$objeto->atributo_publico;
-
-$objeto->metodo_publico();
+			&lt;?php
+			
+			$objeto = new Clase();
+			
+			$objeto->atributo_publico;
+			
+			$objeto->metodo_publico();
 					</code>
 				</pre>
 			</section>
@@ -540,11 +540,11 @@ $objeto->metodo_publico();
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-Clase::atributo_publico;
-
-Clase::metodo_publico();
+			&lt;?php
+			
+			Clase::atributo_publico;
+			
+			Clase::metodo_publico();
 					</code>
 				</pre>
 			</section>
@@ -555,9 +555,9 @@ Clase::metodo_publico();
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-const MI_CONSTANTE = 'Este es el valor de mi constante y no cambiará';
+			&lt;?php
+			
+			const MI_CONSTANTE = 'Este es el valor de mi constante y no cambiará';
 					</code>
 				</pre>
 			</section>
@@ -574,15 +574,15 @@ const MI_CONSTANTE = 'Este es el valor de mi constante y no cambiará';
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	function __construct() {
-
-	}
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				function __construct() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -593,15 +593,15 @@ class NombreDeMiClase {
 				</p>
 				<pre>
 					<code class="php">
-&lt;?php
-
-class NombreDeMiClase {
-
-	function __destruct() {
-
-	}
-
-}
+			&lt;?php
+			
+			class NombreDeMiClase {
+			
+				function __destruct() {
+			
+				}
+			
+			}
 					</code>
 				</pre>
 			</section>
@@ -617,7 +617,7 @@ class NombreDeMiClase {
 			<section>
 				<h1>Let's to Code! \<div class="carita">XD</div>/</h1>
 				<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
-			</section>
+			</section> -->
 <!-- 
 <section>
 	<h1>Unidad 3</h1>
