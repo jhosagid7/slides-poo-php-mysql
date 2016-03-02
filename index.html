@@ -58,8 +58,8 @@
 					<li><a href="#/5">Introducción a la Programación Orientada a Objetos</a></li>
 					<li><a href="#/19">Programación Orientada a Objetos en PHP</a></li>
 					<li><a href="#/52">Bases de Datos con MySQL</a></li>
-					<li><a href="#/69">Introducción al Patrón Modelo Vista Controlador</a></li>
-					<li><a href="#/92">El patrón MVC en PHP</a></li>
+					<li><a href="#/71">Introducción al Patrón Modelo Vista Controlador</a></li>
+					<li><a href="#/86">El patrón MVC en PHP</a></li>
 					<li><a href="#/123">Desarrollo de Framework MVC con PHP y MySQL</a></li>
 				</ol>
 			</section>
@@ -886,92 +886,180 @@ SELECT t1.field1, t1.field2, t1.field3, t2.field1, t2.field5
 					<li><a href="http://www.nebaris.com/post/77/tipos-de-join-en-sql" target="_blank">Tipos de Joins</a></li>
 					<li><a href="http://www.genbetadev.com/bases-de-datos/explicacion-grafica-de-los-join-en-sql-y-sus-resultados" target="_blank">Joins en Gráficos</a></li>
 				</ul>
+			</section>
+			<section>
+				<h3>CONSULTAS FULLTEXT KEY</h3>
+				<pre>
+					<code class="sql">
+SELECT * FROM table
+	WHERE MATCH(field1, field2, field3, field4)
+	AGAINST('a_search' IN BOOLEAN MODE);
+
+SELECT t1.field1, t1.field2, t2.field1, t2.field4
+	FROM table1 AS t1
+	INNER JOIN table2 AS t2
+	ON t1.field1 = t2.field4
+	WHERE MATCH(t1.field1, t1.field2, t2.field1, t2.field4)
+	AGAINST('a_search' IN BOOLEAN MODE);
+					</code>
+				</pre>
 				<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
 			</section>
-<!-- 
-<section>
-	<h2>Streaming de Video:</h2>
-	<p>Considerar las siguientes API's:</p>
-	<ul>
-		<li>
-			<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.URL" target="_blank">Window.URL</a>
-			<b class="fragment">(<small>Para manipular objetos en la URL</small>)</b>
-		</li>
-		<li>
-			<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial" target="_blank">Canvas</a>
-			<b class="fragment">(<small>Para crear el area de renderizado del stream en el cliente</small>)</b>
-		</li>
-		<li>
-			<a href="https://developer.mozilla.org/es/docs/Web/API/Navigator.getUserMedia" target="_blank">Navigator.getUserMedia</a>
-			<b class="fragment">(<small>Para tener acceso a la camara web</small>)</b>
-		</li>
-		<li>
-			<a href="https://developer.mozilla.org/es/docs/DOM/window.requestAnimationFrame" target="_blank">window.requestAnimationFrame</a>
-			<br />
-			<b class="fragment">(<small>Para gestionar la reproducción del stream del cliente</small>)</b>
-		</li>
-	</ul>
-</section>
-<section>
-	<h1>Let's to Stream! \<div class="carita">XD</div>/</h1>
-	<p><a href="#/163">&lt;&lt; regresar unidad 6</a></p>
-</section>
-<section>
-	<h1>Unidad 7</h1>
-	<h2>Node.js en Producción</h2>
-	<div>
-		<img src="img/node-server.png" style="max-width:50%;">
-	</div>
-	<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
-</section>
-<section>
-	<h3>Opciones de Hosting para Node.js</h3>
-	<ul style="list-style:none;">
-		<li>
-			<span style="color:red; font-size:2em">&#9747;</span>Hosting Compartido
-		</li>
-		<li>
-			<span style="color:green; font-size:2em">&#10004;</span>Hosting Dedicados
-		</li>
-		<li>
-			<span style="color:green; font-size:2em">&#10004;</span>Hosting Virtuales (VPS)
-		</li>
-		<li>
-			<span style="color:green; font-size:2em">&#10004;</span>Hosting en la Nube (Cloud Service)
-		</li>
-		<li>
-			<a href="https://github.com/joyent/node/wiki/Node-Hosting" target="_blank">+ info</a>
-		</li>
-	</ul>
-</section>
-<section>
-	<p>
-		Para esta ocasión usaremos <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a>
-	</p>
-	<p>Considerar los siguientes posts:</p>
-	<ul>
-		<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server" target="_blank">How to install Node.js on Ubuntu</a></li>
-		<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-14-04" target="_blank">How to set up a Node.js Application for Production on Ubuntu</a></li>
-		<li><a href="http://web.ua.es/cuantica/docencia/ccem/teoria/node127.html" target="_blank">Comandos del editor vi</a></li>
-	</ul>
-</section>
-<section>
-	<h1>Let's to Deploy! \<div class="carita">XD</div>/</h1>
-</section>
-<section>
-	<h1>
-		Muchas Gracias
-		<br>
-		\<div class="carita">=D</div>/
-	</h1>
-	<h2>¡Hasta la próxima!</h2>
-	<p>
-		<a href="http://twitter.com/jonmircha" target="_blank">@jonmircha</a>
-		/ 
-		<a href="mailto:j@bextlan.com" target="_blank">j@bextlan.com</a>
-	</p>
-	<p><a href="#/">&lt;&lt; inicio</a></p>
-</section> -->
+			<section>
+				<h1>Unidad 4</h1>
+				<h3>Introducción al Patrón<br>Modelo Vista Controlador</h3>
+				<img src="img/mvc.png" style="max-width:40%;"/>
+				<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
+			</section>
+			<section>
+				<h2>Arquitectura de Software</h2>
+			</section>
+			<section>
+				<p>
+					Es la forma en la que se organizan los componentes de un sistema, interactúan y se relacionan entre sí y con su contexto.
+				</p>
+				<br>
+				<p>
+					Aplicando normas y principios de diseño y calidad, que fortalezcan y fomenten la usabilidad a la vez que dejan preparado el sistema, para su propia evolución.
+				</p>
+			</section>
+			<section>
+				<h3>Etapas de la Arquitectura de Software:</h3>
+				<br>
+				<ul>
+					<li>Requerimientos</li>
+					<li>Diseño</li>
+					<li>Documentación</li>
+					<li>Evaluación</li>
+				</ul>
+			</section>			
+			<section>
+				<h3>Tipos de Arquitectura de Software:</h3>
+				<br>
+				<ul>
+					<li>Descomposición Modular</li>
+					<li>Cliente - Servidor</li>
+					<li>Arquitectura de Tres Niveles</li>
+					<li><mark>Modelo Vista Controlador</mark></li>
+					<li>En filtros (pipeline)</li>
+					<li>Entre pares</li>
+					<li>En pizarra</li>
+					<li>Dirigida por eventos</li>
+					<li>Máquinas virtuales</li>
+					<li>Orientada a servicios</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Modelo - Vista -Controlador</h3>
+			</section>
+			<section>
+				<p>
+					Las aplicaciones web son diferentes a los sitios web convencionales porque éstas son capaces de crear una respuesta dinámica.
+				</p>
+				<br>
+				<p>
+					Las aplicaciones Web en general tienen tres aspectos a considerar en su desarrollo.
+				</p>
+			</section>
+			<section>
+				<ul>
+					<li>El código de acceso, inserción, consulta, actualización y/o eliminación de los datos.</li><br>
+					<li class="fragment">El código del diseño de las páginas a mostrar.</li><br>
+					<li class="fragment">El código que controla el flujo de las páginas de la aplicación.</li>
+				</ul>
+			</section>
+			<section>
+				<p>
+					Una forma de separar estos aspectos es usando el patrón de diseño MVC: Modelo-Vista-Controlador, donde:
+				</p>
+				<br>
+				<ul>
+					<li class="fragment">El <b>modelo</b> representa a la lógica de negocio (manipulación de datos).</li><br>
+					<li class="fragment">La <b>vista</b> representa la presentación de los datos (diseño de páginas).</li><br>
+					<li class="fragment">El <b>controlador</b> representa el código de navegación de la aplicación (control de flujo).</li><br />
+				</ul>
+			</section>
+			<section>
+				<p>
+					Modelo-Vista-Controlador es un Patrón de Diseño:
+					<br><br>
+					Los Patrones de Diseño son:
+					<br><br>
+				</p>
+				<ul>
+					<li class="fragment">Soluciones efectivas de problemas comunes en el diseño de software.</li><br>
+					<li class="fragment">Su efectividad ya ha sido comprobada.</li><br>
+					<li class="fragment">Es reusable.</li><br>
+					<li class="fragment">Facilitan el aprendizaje de los programadores inexpertos.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Modelo-Vista-Controlador</h3>
+				<br><br>
+				<ul>
+					<li class="fragment">Fue aportado originariamente por el lenguaje de programación SmallTalk.</li><br>
+					<li class="fragment">Consiste en dividir una aplicación en tres componentes.</li><br>
+					<li class="fragment">Se basa en la separación de responsabilidades ya que cada una de las partes se encarga de un aspecto específico y no interfiere con el de las otras.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Modelo</h2>
+				<br>
+				<ul>
+					<li class="fragment">Representa las capas de lógica de negocio y persistencia de datos.</li><br>
+					<li class="fragment">Se encarga del acceso a los datos para realizar consultas, eliminaciones, inserciones, actualizaciones y almacenarlos en un medio persistente.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Vista</h2>
+				<br>
+				<ul>
+					<li class="fragment">Representa la capa de presentación de los datos.</li><br>
+					<li class="fragment">Se encarga de mostrar la información al usuario (Interfaz de Usuario).</li><br>
+					<li class="fragment">En la vista solo se deben de realizar operaciones simples, como condiciones, ciclos, etc.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Controlador</h2>
+				<br>
+				<ul>
+					<li class="fragment">Se encarga de controlar el flujo de la aplicación.</li><br>
+					<li class="fragment">Tiene la función de recibir y responder a los eventos (acciones del usuario).</li><br>
+					<li class="fragment">Tiene que redirigir o asignar la parte de lógica de negocios a cada petición.</li><br>
+					<li class="fragment">Debe tener un mecanismo para guardar las correspondencias entre peticiones y respuestas que se les asignan.</li>
+			</section>
+			<section>
+				<img src="img/mvc-schema.png" style="max-width: 45%;" />
+				<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
+			</section>
+			<section>
+				<h1>Unidad 5</h1>
+				<h3>El patrón MVC en PHP</h3>
+				<img src="img/mvc-php.png" style="max-width:40%;"/>
+				<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
+			</section>
+			<!-- 
+			<section>
+				<h1>Unidad 6</h1>
+				<h3>El patrón MVC en PHP</h3>
+				<img src="img/mvc-php.png" style="max-width:40%;"/>
+				<p><a href="#/2">&lt;&lt; regresar al temario</a></p>
+			</section>
+			<section>
+				<h1>
+					Muchas Gracias
+					<br>
+					\<div class="carita">=D</div>/
+				</h1>
+				<h2>¡Hasta la próxima!</h2>
+				<p>
+					<a href="http://twitter.com/jonmircha" target="_blank">@jonmircha</a>
+					/ 
+					<a href="mailto:j@bextlan.com" target="_blank">j@bextlan.com</a>
+				</p>
+				<p><a href="#/">&lt;&lt; inicio</a></p>
+			</section>
+			-->
 		</div>
 	</div>
 	<script src="lib/js/head.min.js"></script>
